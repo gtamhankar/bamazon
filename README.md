@@ -49,38 +49,34 @@ Kindly review the video on complete application and testing.
 ----------
 * Along with the basic CRUD operations, implemented "cli-table" in node to format the data for reporting if need be. 
 * Applied "babar" package to create bar graph to show profits by department.
-* Added data validations.
-* Object oriented approach to design so that the application is scalable.
-* Use of nested function callbacks to synchronize the api calls to bandsintown and geocoder.
-* Read file in synchronously (blocking) so that the asynchrnous calls do not conflict between input and output file.
+* Object oriented approach to design so that the application is scalable and modularized.
+* Use of nested function callbacks to synchronize the api calls to handle asynchronous nature of javascript.
 
 
 ### Notes & Limitations:
 --------------------
-Limited scope for error handling. A separate class could have been written to handle response from api in case of issues.
+This is very primary application. Data validation & normalization is out of scope. 
   
 
 ### Logic:
 -------
-liri.js accepts the command line inputs/arguments and maps the input command to the corresponding task. 
-In case of missing/invaid inputs, it handles the inputs to defaults or sends appropriate messages to the user.
-liri.js calls the liriprocess.js by linking them using liridata object.
-Liridata object has properties that are defiend as tasks for each command.
-Each property calls the api and formats/parses the response object.  
-The selected properties of the response object are sent to console and log.txt file. 
+bamazon.js allows the user to continue as customer or asks for credentials to continue as supervisor or manager.
+A series of nested callbacks ensure that the user gets to see all the products and can select the product to buy.
+bamazon.js is a main code snippet that controls the flow of the applciation.
+Security module authenticates user and controls the display of proper menu per the user role.
+bamazonSupervisor, bmazonCustomer, bamazonManager files have the necessary basic functionality bulit in per the type of user.
+
 	
 ### Run Instructions:
 --------------
 To run locally:
 
 1) Clone or download this git repository.
-2) set spotify id  and secret key in .env file. 
-3) liriporcess.js has the api key for the node-geocoder api. Please supply this key in this file.
+2) Update password to database in db.js - update like : password: "xxxx" 
+3) Pls execute schema.sql and seeds.sql in mysql to create necessary database and data.
 3) Install following packages on your machine. - 
-    "dotenv": "^6.1.0",
-    "geocoder": "^0.2.3",
-    "moment": "^2.22.2",
-    "node-geocoder": "^3.22.0",
-    "node-spotify-api": "^1.0.7",
-    "request": "^2.88.0"
-4) Use node liri <command> on command line and run the program.
+    "babar": "^0.2.0",
+    "cli-table": "^0.3.1",
+    "inquirer": "^6.2.1",
+    "mysql": "^2.16.0"
+4) Use node bamazon on command line and run the program.
