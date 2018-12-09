@@ -1,9 +1,11 @@
 # bamazon - node app
-Assignment 12 - bamazon - batch amazon in node 
-Amazon-like storefront with the MySQL and node
+Assignment 12 - bamazon - batch amazon in node.
+
+Amazon-like storefront with the MySQL and node.
 The app will take in orders from customers and deplete stock from the store's inventory. 
 The program can track product sales across your store's departments and 
 then provide a summary of the highest-grossing departments in the store along with a bar graph. 
+The program caters to customer, manager and supervisor roles.
 
 Submitted On: 12/9/2018
 
@@ -12,32 +14,32 @@ Submitted On: 12/9/2018
 This is assignment 12: https://unc.bootcampcontent.com/UNC-Coding-Boot-Camp/UNCHILL201808FSF3/blob/master/homework/12-mysql/Instructions/homework_instructions.md
 
 * Inputs Files: 
-* Output: console or ca be redirected to a text file.
+bamazon.js
+bamazonCustomer.js
+bamazonManager.js
+bamazonSecurity.js
+bamazonSupervisor.js
+db.js
+sql files.
+
+* Output: console or can be redirected to a text file.
 
 
 ### Application Specific Details:
 -----------------------------
 ** Possible Inputs/outputs: **
 
-Seq No   | Input        | Output         | 
+Seq No   |User Role        | Functions         | 
 -------- | ------------  | -------------- | 
-1  |   liri  concert-this <artist/band name here> | Name of the venue  | 
-1  |   | Venue location 	 | 
-1  |   | Date of the Event (use moment to format this as "MM/DD/YYYY") 	|  
-1  |   | Formatted address | 
-2 |    liri spotify-this-song <song name here> else defaults to "The Sign" by Ace of Base. | Artist(s) 						| 
-2 |                                                                                       | The song's name | 
-2  |                                                                                       | A preview link of the song from Spotify | 
-2  |                                                                                       | The album that the song is from |
-3 | liri movie-this <movie name here> else defaults to movie 'Mr. Nobody.'              | Title of the movie. | 
-3  |                                                                                       | Year the movie came out. | 
-3  |                                                                                       | IMDB Rating of the movie. | 
-3 |                                                                                       | Rotten Tomatoes Rating of the movie. | 
-3  |                                                                                       | Country where the movie was produced. | 
-3  |                                                                                       | Language of the movie. | 
-3  |                                                                                       | Plot of the movie. | 
-3  |                                                                                       | Actors in the movie. | 
-4 | liri do-what-it-says (in random.txt file, one of the above commands) | Content like 1/2/3 | 
+1  |   Customer| Displays all of the items/products available for sale & then accepts customer's order | 
+
+2 |    Manager | View Products for Sale						| 
+2 |                                                                                       | View Low Inventory | 
+2  |                                                                                       | Add to Inventory | 
+2  |                                                                                       | Add New Product |
+3 | Supervisor             | View Product Sales by Department | 
+3  |                                                                                       | Create New Department | 
+3  |                                                                                       | Graph Sales by Department | 
                   
 
 ### Outputs:
@@ -56,6 +58,7 @@ Kindly review the video on complete application and testing.
 ### Notes & Limitations:
 --------------------
 This is very primary application. Data validation & normalization is out of scope. 
+The program does not run in a loop to accept user's inputs recursively. 
   
 
 ### Logic:
