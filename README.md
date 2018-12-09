@@ -32,7 +32,6 @@ sql files.
 Seq No   |User Role        | Functions         | 
 -------- | ------------  | -------------- | 
 1  |   Customer| Displays all of the items/products available for sale & then accepts customer's order | 
-
 2 |    Manager | View Products for Sale						| 
 2 |                                                                                       | View Low Inventory | 
 2  |                                                                                       | Add to Inventory | 
@@ -78,8 +77,8 @@ To run locally:
 2) Update password to database in db.js - update like : password: "xxxx" 
 3) Pls execute schema.sql and seeds.sql in mysql to create necessary database and data.
 3) Install following packages on your machine. - 
-    "babar": "^0.2.0",
-    "cli-table": "^0.3.1",
-    "inquirer": "^6.2.1",
-    "mysql": "^2.16.0"
+   "babar": "^0.2.0",
+   "cli-table": "^0.3.1",
+   "inquirer": "^6.2.1",
+   "mysql": "^2.16.0"
 4) Use node bamazon on command line and run the program.
